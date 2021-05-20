@@ -1,1 +1,10 @@
 # HfJsChap13
+
+From the book Head First Javascript Chapter 13
+
+______________________________________________
+
+
+dogs.html -> classes
+
+![dog output](dog.png)
