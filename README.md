@@ -8,3 +8,10 @@ ______________________________________________
 dogs.html -> classes
 
 ![dog output](dog.png)
+
+______________________________________________
+
+
+robots.html -> more classes
+
+![robot output](robot.png)
