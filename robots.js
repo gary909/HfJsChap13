@@ -36,4 +36,6 @@ robby.blinkLights();
 console.log(rosie.name + " was made by " + rosie.maker + " in " + rosie.year + " and is owned by " + rosie.owner);
 rosie.cleanHouse();
 
+
+
 //console.log(rosie)
