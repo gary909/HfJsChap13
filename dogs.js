@@ -50,4 +50,6 @@ Dog.prototype.sit = function() {
 
 barnaby.sit();
 
+console.log(fluffy)
+
 //console.log(Dog)
