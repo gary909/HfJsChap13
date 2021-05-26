@@ -62,4 +62,13 @@ spot.sit();
 
 console.log(fluffy)
 
+spot.hasOwnProperty("species");
+fido.hasOwnProperty("species");
+
+spot.hasOwnProperty("sitting");
+spot.sitting = true;
+spot.hasOwnProperty("sitting");
+fido.hasOwnProperty("sitting");
+spot.sitting = true;
+
 //console.log(Dog)
