@@ -11,6 +11,28 @@ function ShowDog(name, breed, weight, handler) {
     this.handler = handler;
 }
 
+ShowDog.prototype = new Dog();
+
+ShowDog.prototype.league = "Webville";
+
+ShowDog.prototype.stack = function() {
+    console.log("Stack");
+};
+
+ShowDog.prototype.bait = function() {
+    console.log("Bait");
+};
+
+ShowDog.prototype.gait = function(kind) {
+    console.log(kind + "ing");
+};
+
+ShowDog.prototype.groom = function() {
+    console.log("Groom");
+};
+
+
+
 Dog.prototype.species = "canine";
 
 Dog.prototype.bark = function() {
@@ -78,7 +100,14 @@ spot.hasOwnProperty("sitting");
 fido.hasOwnProperty("sitting");
 spot.sitting = true;
 
-ShowDog.prototype = new Dog();
-console.log(ShowDog) 
+var scotty = new ShowDog("Scotty", "Scottish Terrier", 15, "Cookie");
+
+scotty.stack();
+scotty.bark();
+console.log(scotty.league);
+console.log(scotty.species);
+
+
+//console.log(scotty) 
 
 //console.log(Dog) 
