@@ -4,6 +4,13 @@ function Dog(name, breed, weight) {
     this.weight = weight;
 }
 
+function ShowDog(name, breed, weight, handler) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.handler = handler;
+}
+
 Dog.prototype.species = "canine";
 
 Dog.prototype.bark = function() {
@@ -71,4 +78,7 @@ spot.hasOwnProperty("sitting");
 fido.hasOwnProperty("sitting");
 spot.sitting = true;
 
-//console.log(Dog)
+ShowDog.prototype = new Dog();
+console.log(ShowDog) 
+
+//console.log(Dog) 
