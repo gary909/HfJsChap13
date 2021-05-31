@@ -5,13 +5,15 @@ function Dog(name, breed, weight) {
 }
 
 function ShowDog(name, breed, weight, handler) {
-    this.name = name;
-    this.breed = breed;
-    this.weight = weight;
+    // this.name = name;        }
+    // this.breed = breed;      ] - This code is repeating, combine it with a .call
+    // this.weight = weight;    }
+    Dog.call(this, name, breed, weight);
     this.handler = handler;
 }
 
 ShowDog.prototype = new Dog();
+ShowDog.prototype.constructor = ShowDog;
 
 ShowDog.prototype.league = "Webville";
 
@@ -115,11 +117,10 @@ if (scotty instanceof ShowDog) {
     console.log("Scotty is a ShowDog");
 }
 
-scotty.stack();
-scotty.bark();
-console.log(scotty.league);
-console.log(scotty.species);
-
+//scotty.stack();
+//scotty.bark();
+//console.log(scotty.league);
+//console.log(scotty.species);
 
 console.log("Fido constuctor is " + fido.constructor);
 
