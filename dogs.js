@@ -52,6 +52,13 @@ Dog.prototype.wag = function() {
 };
 
 var fido = new Dog("Fido", "Mixed", 38);
+if (fido instanceof Dog) {
+    console.log("Fido is a Dog");
+}
+if (fido instanceof ShowDog) {
+    console.log("Fido is a show dog");
+}
+
 var fluffy = new Dog("Fluffy", "Poodle", 30);
 var spot = new Dog("Spot", "Chihuahua", 10);
 
@@ -101,11 +108,22 @@ fido.hasOwnProperty("sitting");
 spot.sitting = true;
 
 var scotty = new ShowDog("Scotty", "Scottish Terrier", 15, "Cookie");
+if (scotty instanceof Dog) {
+    console.log("Scotty is a Dog");
+}
+if (scotty instanceof ShowDog) {
+    console.log("Scotty is a ShowDog");
+}
 
 scotty.stack();
 scotty.bark();
 console.log(scotty.league);
 console.log(scotty.species);
+
+
+console.log("Fido constuctor is " + fido.constructor);
+
+console.log("Scotty constuctor is " + scotty.constructor);
 
 
 //console.log(scotty) 
